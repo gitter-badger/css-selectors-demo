@@ -22,12 +22,8 @@ class AppViewModel
 
       @matchRendererVM.mark markers
 
-
-    @render window.location.hash.replace '#', ''
-
-    window.onhashchange = (e) =>
-      emmetString =  window.location.hash.replace '#', ''
-      @render emmetString
+    @update()
+    window.onhashchange = @update.bind @
 
   render: (emmetString) ->
     unless emmetString
@@ -43,6 +39,10 @@ class AppViewModel
       @dom.querySelectorAll selector
     catch e
       []
+
+  update: ->
+    hash = window.location.hash.replace '#', ''
+    @render decodeURI hash
 
 buildTree = (nodes) ->
   root = document.createDocumentFragment()
