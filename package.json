@@ -1,6 +1,6 @@
 {
   "name": "css-selectors-demo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CSS Selectors Demo",
   "private": true,
   "dependencies": {

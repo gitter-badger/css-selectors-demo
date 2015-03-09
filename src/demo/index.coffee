@@ -1,4 +1,7 @@
 AppView = require './views/app.view.coffee'
+AppVM   = require './view-models/app.vm.coffee'
 
-{node} = AppView().data
+app = new AppVM
+
+{node} = AppView(app).data
 document.body.appendChild node
