@@ -1,6 +1,6 @@
 TagView = require './tag-view.coffee'
 
-require '../../../bower_components/highlightjs/styles/monokai_sublime.css'
+require '../../../bower_components/highlightjs/styles/github.css'
 
 HTMRendererView = (vm) ->
 	nxt.Element 'pre',
